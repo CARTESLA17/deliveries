@@ -4,7 +4,7 @@
 
 1. With the console located inside the folder called ./DeliveriesRoot execute the next command:
 
-mvn-clean-install
+mvn clean install
 
 2. The name of the main jar is:
 
@@ -14,7 +14,7 @@ this file is located in the next folder:
 
 .\DeliveriesRoot\Deliveries\target\
 
-3. Build the next folder tress with the files:
+3. Build the next folder tree with the files:
 
 ./app/Deliveries-1.0-jar-with-dependencies.jar
 
@@ -22,12 +22,12 @@ this file is located in the next folder:
 
 ./file_paths/outputs/
 
-# this file is located in the next folder: .\DeliveriesRoot\
+# the file configuration.properties is located in the next folder: .\DeliveriesRoot\
 ./configuration.properties
 
-4. The folder called./file_paths/inputs/ is for the input files.
+4. The folder called ./file_paths/inputs/ is for the input files.
 
-5. The folder called./file_paths/outputs/ is for the output files.
+5. The folder called ./file_paths/outputs/ is for the output files.
 
 6. The file called configuration.properties is the file for configurations of the app.
 
