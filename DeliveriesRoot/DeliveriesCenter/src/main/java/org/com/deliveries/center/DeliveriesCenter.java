@@ -10,9 +10,9 @@ import java.util.concurrent.Executors;
 import org.com.deliveries.DeliveriesConfiguration;
 import org.com.deliveries.repository.DeliveriesRepository;
 import org.com.deliveries.repository.impl.DeliveriesRepositoryImpl;
+import org.com.deliveries.runnables.DeliveriesRunnable;
 import org.com.deliveries.service.DeliveriesService;
 import org.com.deliveries.service.impl.DeliveriesServiceImpl;
-import org.com.deliveries.threads.DeliveriesRunnable;
 import org.com.deliveries.utils.Utils;
 
 public class DeliveriesCenter {	
