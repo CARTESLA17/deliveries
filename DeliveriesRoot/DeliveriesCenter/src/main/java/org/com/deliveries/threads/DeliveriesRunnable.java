@@ -8,13 +8,13 @@ import org.com.deliveries.models.Drone;
 import org.com.deliveries.service.DeliveriesService;
 import org.com.deliveries.utils.Utils;
 
-public class DeliveriesThread extends Thread{
+public class DeliveriesRunnable implements Runnable{
 	
 	private Path inputFile;
 	private DeliveriesService deliveriesService;
 	private String deliveriesId;
 	
-	public DeliveriesThread(Path inputFile, DeliveriesService deliveriesService, String deliveriesId) {
+	public DeliveriesRunnable(Path inputFile, DeliveriesService deliveriesService, String deliveriesId) {
 		super();
 		this.inputFile = inputFile;
 		this.deliveriesService = deliveriesService;

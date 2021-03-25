@@ -22,9 +22,11 @@ public class DeliveriesRepositoryImpl implements DeliveriesRepository {
 		String outPutFilePath = repositoryFolder+outPutFileName;		
 		Path path = Paths.get(outPutFilePath).toAbsolutePath().normalize();
 		Files.deleteIfExists(path);
-		PrintWriter writer = new PrintWriter(outPutFilePath, "UTF-8");
-		reportList.forEach( report -> writer.println(report) );		
-		writer.close();		
+		try( PrintWriter writer = new PrintWriter(outPutFilePath, "UTF-8") ){
+			reportList.forEach( report -> writer.println(report) );				
+		}catch (Exception exception) {
+			throw exception;
+		}
 	}
 
 }

@@ -67,28 +67,16 @@ public class Utils {
 	}
 
 	public static List<String> getInformationFromFile(Path inputFile) throws Exception {
-		List<String> deliveryPaths = new ArrayList<>();
-		BufferedReader buffredReader = null;	    
-		InputStream inputStream = null;		
-		try {			
-			inputStream = new FileInputStream( inputFile.toFile() );
-			buffredReader = new BufferedReader(new InputStreamReader(inputStream));
+		List<String> deliveryPaths = new ArrayList<>();			
+		try(InputStream inputStream = new FileInputStream( inputFile.toFile() );
+			BufferedReader buffredReader = new BufferedReader(new InputStreamReader(inputStream)) ){			
 	        String line;
 	        while( (line = buffredReader.readLine()) != null ){
 	            deliveryPaths.add(line);
 	        }
 		} catch( Exception exception){
 			throw exception;
-		} finally {
-		    if( inputStream != null ){
-		        try {
-		            inputStream.close();
-		        } catch (IOException e) {
-		            e.printStackTrace();
-		        }
-		    }
-		    if( buffredReader!=null ) buffredReader.close();
-		}
+		} 
 		return deliveryPaths;
 	}
 
